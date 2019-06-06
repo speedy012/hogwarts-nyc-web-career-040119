@@ -83,7 +83,7 @@ ul {
   outline: #3B0B0B dotted thick;
   transition: 0.75s;
   opacity: 1;
-  width: 300px;
+  /* width: 300px; */
 }
 
 .minBackgroundSneak {
@@ -132,6 +132,10 @@ ul {
 .footer {
   padding: 1%;
   clear: both;
+}
+
+.ui {
+  padding-top: 55px;
 }
 
 

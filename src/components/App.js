@@ -36,12 +36,12 @@ class App extends Component {
 
   render() {
     return (
-      <div className="App">
+      <div className="App" >
           < Nav />
-            <div onClick={this.sortOrFilter}>
-              <button id='name'> Sort By Name</button>
-              <button id='weight'> Sort By Weight</button>
-              <button id='greased'> Greased</button>
+            <div onClick={this.sortOrFilter} className="ui container">
+              <button id='name' className="ui button"> Sort By Name</button>
+              <button id='weight' className="ui button"> Sort By Weight</button>
+              <button id='greased' className="ui button"> Greased</button>
             </div>
           < Hogs hogs={this.state.hogs}/>
 

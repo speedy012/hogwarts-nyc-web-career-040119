@@ -8,23 +8,14 @@ export default class Hogs extends Component {
       // console.log(hog)
       return (
         < Hog hog={hog} />
-
       )
     })
   }
-  // <div className="pigTile">
-  // <h3>{hog.name}</h3>
-  //
-  // </div>
-  // <img src={`../hog-imgs/${hog.name}.jpg`} alt={this.props.snack.name}/>
-
   render() {
     // console.log(this.props.hogs)
     return (
-
-      <div className='ui grid container'>
+      <div className="ui grid container">
         {this.hogsList()}
-
       </div>
     )
   }

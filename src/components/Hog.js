@@ -18,12 +18,10 @@ export default class Hog extends Component {
 
   hide = (e) => {
     this.setState({
-      ...this.state.details,
-      shown: false
+      ...this.state.details, shown: false
     })
 
   }
-
 
   showSomething = () => {
     if (this.state.details === false) {
@@ -44,27 +42,25 @@ export default class Hog extends Component {
 
   showContainer = () => {
     if (this.state.shown) {
-
-    return <div className='ui eight wide column' key={this.props.hog.name}
-            id={this.props.hog.name}
-            className="pigTile"
-            onClick={this.details}>
-            <h3>{this.props.hog.name}</h3>
-            <button onClick={this.hide}>Hide</button>
-            {this.showSomething()}
-          </div>
+      return <div key={this.props.hog.name}
+              id={this.props.hog.name}
+              className="ui centered card pigTile"
+              onClick={this.details}>
+              <h3>{this.props.hog.name}</h3>
+              <button onClick={this.hide}>Hide</button>
+              <p></p>
+              {this.showSomething()}
+            </div>
     } else {
-
-
-
     }
-
   }
 
   render() {
     return (
-      <div>
-        {this.showContainer()}
+      <div className="ui eight wide column">
+        <div className="ui container">
+          {this.showContainer()}
+        </div>
       </div>
     )
   }
