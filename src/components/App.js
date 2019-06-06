@@ -20,12 +20,16 @@ class App extends Component {
     } else if (e.target.id === 'weight') {
       const weight = 'weight as a ratio of hog to LG - 24.7 Cu. Ft. French Door Refrigerator with Thru-the-Door Ice and Water'
       const newHogs = this.state.hogs.sort((a,b) => a[weight] - b[weight])
-      
+
       this.setState({
         hogs: newHogs
       })
     } else if (e.target.id === 'greased') {
+      const newHogs = this.state.hogs.filter(hog => hog.greased)
 
+      this.setState({
+        hogs: newHogs
+      })
     }
 
   }

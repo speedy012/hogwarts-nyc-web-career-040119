@@ -3,16 +3,27 @@ import React, { Component } from 'react';
 export default class Hog extends Component {
 
   state = {
-    details: false
+    details: false,
+    shown: true
   }
 
   details = (e) => {
     // console.log(e.currentTarget);
     // console.log(this);
     this.setState({
-      details: true
+      ...this.state.shown, details: true
+
     })
   }
+
+  hide = (e) => {
+    this.setState({
+      ...this.state.details,
+      shown: false
+    })
+
+  }
+
 
   showSomething = () => {
     if (this.state.details === false) {
@@ -31,18 +42,29 @@ export default class Hog extends Component {
     }
   }
 
+  showContainer = () => {
+    if (this.state.shown) {
+
+    return <div className='ui eight wide column' key={this.props.hog.name}
+            id={this.props.hog.name}
+            className="pigTile"
+            onClick={this.details}>
+            <h3>{this.props.hog.name}</h3>
+            <button onClick={this.hide}>Hide</button>
+            {this.showSomething()}
+          </div>
+    } else {
+
+
+
+    }
+
+  }
+
   render() {
     return (
-      <div key={this.props.hog.name}
-        id={this.props.hog.name}
-        className="pigTile"
-        onClick={this.details}>
-
-        <h3>{this.props.hog.name}</h3>
-
-        {this.showSomething()}
-
-
+      <div>
+        {this.showContainer()}
       </div>
     )
   }

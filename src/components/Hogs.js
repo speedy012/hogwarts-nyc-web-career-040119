@@ -22,9 +22,9 @@ export default class Hogs extends Component {
     // console.log(this.props.hogs)
     return (
 
-      <div>
+      <div className='ui grid container'>
         {this.hogsList()}
-        
+
       </div>
     )
   }
