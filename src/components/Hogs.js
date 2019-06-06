@@ -8,6 +8,7 @@ export default class Hogs extends Component {
       // console.log(hog)
       return (
         < Hog hog={hog} />
+
       )
     })
   }
@@ -20,8 +21,10 @@ export default class Hogs extends Component {
   render() {
     // console.log(this.props.hogs)
     return (
+
       <div>
         {this.hogsList()}
+        
       </div>
     )
   }
